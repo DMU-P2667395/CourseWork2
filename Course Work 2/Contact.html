@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Us!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS\style.css">
+  </head>
+  <body>
+<div class="Header"><!--this is my header which is the same throughout the pages-->
+  <img id="logo" src="Image\logo.png" alt="NASA-logo">
+  <h1> James Webb Space Telescope</h1><!--this is a header-->
+</div>
+
+<button class="drpbtn">Menu<!--this is my dropdown menu-->
+  <div class="dropdown-content">
+    <a href="Home.html">Home</a>
+    <a href="About.html">About JWST</a>
+    <a href="ASJW.html">About Sir James</a>
+    <a href="Contact.html">Contact Us!</a>
+  </div>
+</button>
+
+<div class="contactus"><!--this is the start of my contact page -->
+  <h2>Contact us!</h2><!--this is the heading for it-->
+  <p>Have quesitons that haven't been answered?</p>
+  <div class="conbox"><!--this creates a general div for the main section of the flexbox-->
+    <div class="con-left"><!--this is the left side which i want to have more space because theres fields to fill out-->
+      <h3>Send Your Request</h3><!--this is the heading for the left-->
+      <form><!--this creates a table-->
+        <div class="inrow"><!--this is one pair of rows-->
+          <div class="inpgroup"><!--this is one data entry point-->
+            <label>Name</label><!-- this is the label just above the textbox-->
+            <input type="text" placeholder=" John Doe"><!--this creates a textbox and gives  placeholder-->
+          </div>
+        </div>
+        <div class="inrow">
+          <div class="inpgroup"><!--this is another data entry point -->
+            <label>Phone Number</label>
+            <input type="text" placeholder="+44 07870142743">
+          </div>
+        </div>
+        <div class="inrow"><!--this is another row-->
+          <div class="inpgroup">
+            <label>Email</label>
+            <input type="email" placeholder="Johndoe@gmail.com">
+          </div>
+        </div>
+        <div class="inrow">
+          <div class="inpgroup">
+            <label>Subject</label>
+            <input type="text" placeholder="What are stars made from">
+          </div>
+        </div>
+        <label>Message</label><!--this is the final text box which will be bigger to accomodate a whole message from someone-->
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button><!--this is a button to submit the form-->
+      </form>
+    </div>
+    <div class="con-right"><!--this is the right side of the flexbox-->
+      <h3>Reach Us</h3><!--another heading-->
+      <table><!--this creates a table-->
+        <tr><!--this is one row-->
+          <td>Email</td><!--this is a cell inside the table-->
+          <td>Nasa@gmail.com</td> <!--another cell-->
+        </tr>
+        <tr><!--another row-->
+          <td>Phone</td>
+          <td>01263744478</td>
+        </tr>
+        <tr>
+          <td>Adress</td>
+          <td>NASA Headquarters<br> 300 E St., SW<br> Suite 5R30<br> Washington, DC 20546</td>
+        </tr>
+      </table>
+    </div><!--end if the right side-->
+  </div><!--end of the inside of the box-->
+</div><!--end of the flexbox-->
+
+<footer>
+  <p>If you wish to find out more about the telescope click <a href="https://www.jwst.nasa.gov/">Here</a></p> <!-- i embed the link in the paragraph so that it appears in the same sentence, i have also turned it whtie through css to ensure it looks alike to the text except for being underlined-->
+</footer>
+
+  </body>
+</html>
