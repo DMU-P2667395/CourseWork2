@@ -1,0 +1,361 @@
+body{
+  background-color: #9daab6;/*this will cahnge the background for every page to keep it all unifrom */
+}
+/*this is the start of the header*/
+.Header{
+  display: flex;/*this puts it in a flex box so that i can easily distribute the header*/
+  flex-direction: row;/*tells the flexbox that i want it in rows*/
+  justify-content: space-around;/*tells the browser to create space depending on the screen size*/
+  height: 250px;/*sets the hight of the flexbox*/
+  width: 100%;/*set the width*/
+  font-size: 18px;/*sets the font size*/
+  font-weight: bold;/*makes the text bold*/
+  font-family: sans-serif;/*changes the font style*/
+  color: white;/*changes the colour of the text*/
+  background-color: #111111;/*changes the background colour*/
+}
+
+#logo{
+  width: 200px;
+  height: 150px;
+  padding: 10px;/*adds padding to the logo so that nothing will overlap it*/
+  border: 0px;/*adds a border around it but in this case ive not put one because i already have padding*/
+  /*this is the end of the header*/
+}
+/*This is the start for the menu button*/
+.drpbtn{
+  padding: 20px 35px;
+  display: inline-block;/*this makes the element display inline */
+  position: relative;/*this tells it that its position is relative to the rest of the page*/
+  background: #7c90a2;
+  color: black;
+  font-size: 20px;
+  transition-duration: 0.3s;/*this tells it that theres a 0.3 time between hovering over and the dropdown appearing*/
+  float: right;/*tells it to go to the right side of the page*/
+}
+.drpbtn:hover {/*i use a hover to create the dropdown effect*/
+  background-color: #5c7387;
+  color: white;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);/*this creates a box shadow for when the dropdown appears to make it a little more fancy*/
+  text-align: center;/*aligns the text in the center*/
+  right: 0;/*means that it wont put it to the right*/
+}
+.drpbtn:hover .dropdown-content{/*this means that the dropdown content will appear as a hover*/
+  display: block;/*this means that they should show the block when hovered over*/
+}
+.dropdown-content a {/*this only affects the links in the dropdown menu*/
+  display: block;
+  color: white;
+  padding: 16px 16px;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+.dropdown-content a:hover {/*this will change the colour of the text and button on th edropdown menu when hovered over*/
+  color: #ffffff;
+  background-color: #3f4c57;
+}
+/*this is the end of the dropdown menu*/
+
+/*Home Page*/
+#welcome{
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: inherit;
+  padding-left: 10px;
+  border: 5px;
+}
+video{/*this will customise every video on my website but because i only have one its fine, if i wanted to customise more i would give thme an ID*/
+  width: 90%;/*i only make it 90% so that theres some space at the sides of the page to make it seem better*/
+  padding: 10px;
+}
+.ajwt{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 10px;
+  border: 5px;
+}
+#imgpara {
+  background: #497eb0;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  text-decoration: underline;
+  width: 250px;
+  color: #fff;/*changes the colour of the text*/
+  height: 20px;/*changes height */
+  border-radius: 100px;/*creates the smooth corners to make it a more oval shape*/;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);/*adds a boxshadow like the dropdown menu */
+
+}
+#headshotjw{
+  width: 80%;
+  height: 20%;
+  padding: 12px;
+  padding-bottom: none;
+  border: 5px;
+  border-bottom: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.smtbx_whs{
+  display: flex;
+  flex-direction: column;
+}
+.smtbx_whs p {
+  font-size: 18px;
+  font-weight: 200;
+  padding: 10px;
+  border: 1px;
+}
+footer {/*because all the footers will g=be the same on my site i can eaisly customise all of them*/
+  height: 50px;
+  background-color: #111111;
+  color: white;
+}
+footer a {
+  color: white;
+}
+
+/* this is the about page */
+#absjwt{
+  margin: auto;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-top: 10px;/*the reason i put less padding on the sides is because they didn't need it */
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+/*this is the start of my slide show for the about page*/
+.slidecontainer {
+  margin-left: auto;/*this measn that the container wil stay perfectly in the middle no matter the screen size */
+  margin-right: auto;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;/*this makes all the other images go on top of each other and are "hidden" from view*/
+  border: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.slidephoto {
+  position: absolute;/*this locks everything in place*/
+  animation: round 16s infinite;/*this makes it so that theres 4 seconds for every photo*/
+  opacity: 0;
+}
+
+@keyframes round {/*this is how i do the transition effect*/
+  25% {
+    opacity: 1;/*this makes the opacity 25% and will start the fading effect */
+  }
+  40% {/*this then carrys through and completes it */
+    opacity: 0;
+  }
+}
+-webkit-@keyframes round {
+  25% {
+    opacity: 1;
+    -webkit-opacity: 1;/*this sets the opactiy again through webkit*/
+  }
+  40% {
+    opacity: 0;
+    -webkit-opacity: 0;
+  }
+}
+
+img:nth-child(1) {/*i use this to select the photos and give them nuber 1-4*/
+  animation-delay: 12s;/*i set this one at 12s to give me 4 seconds per photo*/
+}
+img:nth-child(2) {
+  animation-delay: 8s;/*after 4 seconds the opactiy will change and the other photo will take its place*/
+}
+img:nth-child(3) {
+  animation-delay: 4s;/*etc etc same as the previous*/
+}
+img:nth-child(4) {
+  animation-delay: 0s;
+}
+/*this is the end of the slideshow*/
+
+/*start of the timer*/
+#headcountd{
+  font-size: 25px;
+  font-family: sans-serif;
+  text-align: center;/*i aline it in the center of the page with this*/
+  text-decoration: underline;/*i add an underline here*/
+}
+#countdown {
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+  padding-bottom: 20px;
+}
+
+/*end of timer*/
+
+/*this is the start of all info in the about page*/
+#constimg{
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  padding: 15px;
+  border: 5px;/*i add a border here to keep everything in its place*/
+}
+.const_info{
+  display: flex;
+}
+.const_info p {
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 5px;
+  border: 3px;
+  width: 90%;/*this makes it so that the text is tight together*/
+}
+/*end of the abour page info*/
+
+/*start of the about sir james webb page*/
+#abwelc{
+  margin: auto;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-top: 10px;/*this add padding depending on the tag after, example; top, right, left, bottom*/
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 5px;
+}
+.flex-asjw{
+  display: flex;
+  margin: auto;
+}
+#flexp{/*i gave this paragraph a id because its seperate to the rest so i can individually cusyomise it */
+  font-size: 20px;
+  width: 80%;
+}
+.flex-asjw p { /*this jsut customises to the paragrahs in the flexbox nothnign else*/
+  width: 80%;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.flex-asjw h2 {/*the sam with h2 this will only customise the h2 in the flexbox*/
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+#inforsjwh{
+  width: 75%;
+  padding-right: 10px;
+  align-self: center;
+}
+.adinfo{
+  margin: auto;
+  padding: 15px;
+  font-size: 16px;
+  font-family: sans-serif;
+  width: 90%
+}
+.adinfo h2 {
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.audiotrans h2 {
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-left: 15px;
+}
+.audiotrans p {
+  width: 90%;
+  font-size: 16px;
+  padding-left: 15px;
+  font-family: sans-serif;
+}
+/*this is the end of the about sir james page */
+
+/*this is the start of the contact page*/
+
+.contactus{/*this makes the div 80% of the page to make it look nicer*/
+  margin: auto;/*this is to center the box*/
+  font-family: sans-serif;
+}
+.contactus h2 {
+  margin-bottom: 10px;
+}
+.contactus p {
+  margin-bottom: 40px;
+}
+.conbox{
+  background: white;/*this makes the background white*/
+  display: flex;/*makes it a flexbox*/
+}
+.con-left{
+  flex-basis: 40%;/*makes it so the flexbox has a 60/40 split between the left and right accordinly*/
+  padding: 40px;/*adds padding to the left side */
+}
+.con-right{
+  flex-basis: 60%;/*makes sure the flexbox is distributed properly */
+  padding: 40px;/*i dont need padding between them any more because the left side has padding for the right*/
+  background: #497eb0;/*this adds another colour to the page similar to my other backgroudn colour to make the page seem nicer*/
+  color: white;/*makes the tex white*/
+}
+.inrow{
+  display: flex;/*creates another flexbox for the rows of the table*/
+  justify-content: space-between;/*this makes it so that theyre evenly spaced in their pairs*/
+  margin-bottom: 20px;/*gives space between the entry fields*/
+}
+.inrow .inpgroup {
+  flex-basis: 45%;/*gives each input group a basis of 45% to work around in the flexbox */
+}
+.inrow .inpgroup input {/*this changes the look of the inputs*/
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;/*this makes it so theres only one line on the bottom of the entry field to make it look more proffesional*/
+  outline: none;/*this makes sure theres no outline*/
+  padding-bottom: 5px;
+}
+.con-left textarea {/*this edits the text area of the left side*/
+  width: 100%;/*makes it the whoel width of the flexbox*/
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;/*again the same with no outline and only a small grey line on the bottom*/
+  padding: 10px;/*adds paddign to keep the area around clear*/
+  box-sizing: border-box;/*makes it so the box doesnt go further than the other text areas again to make it seem more proffesional*/
+}
+.con-left button {/*customises the button*/
+  background: #9DC7EF;/*customises background*/
+  width: 100px;
+  border: none;
+  outline: none;/*makes it so theres no border or outline*/
+  color: #fff;/*changes the colour of the text*/
+  height: 35px;/*changes height */
+  border-radius: 30px;/*creates the smooth corners to make it a more oval shape*/
+  margin-top: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);/*adds a boxshadow like the dropdown menu */
+}
+
+.con-left h3 {/*customsies the h3 element*/
+  color: #9DC7EF;/*text colour*/
+  font-weight: 600;/*how large the text is*/
+  margin-bottom: 30px;/*creates space toward the bottom*/
+}
+
+tr td:first-child{/*matches the first row element with the other cells info to keep the info together*/
+  padding-right: 0px;/*adds padding to ensure they're not directly next to eachother */
+}
+
+tr td {
+  padding-top: 20px; /* adds padding to the top to ensure that everything isn't stacked ontop of eachother*/
+}
+
+/*End of the Contact Page*/
